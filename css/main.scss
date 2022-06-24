@@ -64,6 +64,10 @@ $innerwidth : 1320px;
     display: block;
     height: 50px;
     background-color: #ffcc00;
+    &.swiper-container{}
+    &.swiper-wrapper{}
+    &.swiper-slide{}
+
 }
 
 /* layout */
