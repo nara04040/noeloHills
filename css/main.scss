@@ -64,9 +64,16 @@ $innerwidth : 1320px;
     display: block;
     height: 50px;
     background-color: #ffcc00;
-    &.swiper-container{}
+    &.swiper-container{
+        position: relative;
+        display: block;
+    }
     &.swiper-wrapper{}
     &.swiper-slide{}
+    &.banner-1{
+        background: url('../images/banner_pc_1.jpg');
+    }
+
 
 }
 
