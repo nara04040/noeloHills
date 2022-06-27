@@ -406,7 +406,7 @@ $innerwidth : 1320px;
                 color: #fff;
                 background-color: #ffcc00;
                 margin-bottom: 35px;
-                padding: 20px 30px;
+                padding: 10px 20px;
             }
         }
     }
@@ -447,6 +447,7 @@ $innerwidth : 1320px;
                 display: block;
                 padding: 20px 33px;
                 border: 2px solid #777;
+                font-size: 20px;
             }
 
 
@@ -482,16 +483,162 @@ $innerwidth : 1320px;
 .sitemap {
     position: relative;
     display: block;
+    border-top: 1px solid #bcbcbc;
 }
 
-.sitemap .inner {}
+.sitemap .inner {
+    display: flex;
+    justify-content: center;
+}
+
+.sitemap-menu {
+    position: relative;
+    display: block;
+    padding: 35px 0;
+    width: 770px;
+
+    >li {
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: 45px;
+        &:hover >a {
+            color: #ffcc00;
+        }
+        >a {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+
+            &:hover {
+                color: #ffcc00;
+            }
+        }
+    }
+
+}
+
+.sitemap-submenu {
+    position: relative;
+    display: block;
+    margin-top: 15px;
+
+    >li {
+        position: relative;
+        display: block;
+        margin-bottom: 15px;
+
+        >a {
+            position: relative;
+            display: inline-block;
+            font-size: 12px;
+
+            &:hover {
+                color: #ffcc00;
+            }
+        }
+    }
+
+}
+
+
 
 /* 하단 */
 .footer {
     position: relative;
     display: block;
 
-    .footer-top {}
+    .inner {
+        width: 770px;
+    }
 
-    .footer-bottom {}
+    .footer-top {
+        position: relative;
+        display: block;
+        border-top: 1px solid #dcdcdc;
+        background-color: #f3f3f3;
+        padding: 35px 0;
+
+        .siteinfo-list {
+            position: relative;
+            display: block;
+            white-space: nowrap;
+
+            li {
+                position: relative;
+                display: block;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 40px;
+                    font-size: 12px;
+                    color: #7e868c;
+
+                    em {
+                        position: relative;
+                        display: inline-block;
+                        margin-left: 20px;
+                        font-size: 12px;
+                        color: #777;
+                    }
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+        .insta-link {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 155px;
+            height: 30px;
+            background: url('../images/ico_insta.png') no-repeat center;
+
+        }
+    }
+
+    .footer-bottom {
+        position: relative;
+        display: block;
+        border-top: 1px solid #dcdcdc;
+        background-color: #e5e5e5;
+        padding: 25px 0;
+
+        .inner {
+            .copy {
+                position: relative;
+                display: block;
+                float: left;
+                font-size: 12px;
+                color: #777;
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+
+            .service-list {
+                position: relative;
+                display: block;
+                float: right;
+
+                li {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 20px;
+                    a {
+                        font-size: 12px;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
 }

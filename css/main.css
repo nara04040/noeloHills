@@ -342,7 +342,7 @@ body {
   color: #fff;
   background-color: #ffcc00;
   margin-bottom: 35px;
-  padding: 20px 30px;
+  padding: 10px 20px;
 }
 
 /* 카테고리 */
@@ -377,6 +377,7 @@ body {
   display: block;
   padding: 20px 33px;
   border: 2px solid #777;
+  font-size: 20px;
 }
 .category .inner > div:nth-child(1) {
   background: url("../images/main_img01_2.png") no-repeat center;
@@ -399,10 +400,138 @@ body {
 .sitemap {
   position: relative;
   display: block;
+  border-top: 1px solid #bcbcbc;
+}
+
+.sitemap .inner {
+  display: flex;
+  justify-content: center;
+}
+
+.sitemap-menu {
+  position: relative;
+  display: block;
+  padding: 35px 0;
+  width: 770px;
+}
+.sitemap-menu > li {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 45px;
+}
+.sitemap-menu > li:hover > a {
+  color: #ffcc00;
+}
+.sitemap-menu > li > a {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sitemap-menu > li > a:hover {
+  color: #ffcc00;
+}
+
+.sitemap-submenu {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+}
+.sitemap-submenu > li {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+}
+.sitemap-submenu > li > a {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+}
+.sitemap-submenu > li > a:hover {
+  color: #ffcc00;
 }
 
 /* 하단 */
 .footer {
   position: relative;
   display: block;
+}
+.footer .inner {
+  width: 770px;
+}
+.footer .footer-top {
+  position: relative;
+  display: block;
+  border-top: 1px solid #dcdcdc;
+  background-color: #f3f3f3;
+  padding: 35px 0;
+}
+.footer .footer-top .siteinfo-list {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+.footer .footer-top .siteinfo-list li {
+  position: relative;
+  display: block;
+}
+.footer .footer-top .siteinfo-list li span {
+  position: relative;
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 12px;
+  color: #7e868c;
+}
+.footer .footer-top .siteinfo-list li span em {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #777;
+}
+.footer .footer-top .siteinfo-list li span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer .footer-top .insta-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 155px;
+  height: 30px;
+  background: url("../images/ico_insta.png") no-repeat center;
+}
+.footer .footer-bottom {
+  position: relative;
+  display: block;
+  border-top: 1px solid #dcdcdc;
+  background-color: #e5e5e5;
+  padding: 25px 0;
+}
+.footer .footer-bottom .inner .copy {
+  position: relative;
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: #777;
+}
+.footer .footer-bottom .inner .copy strong {
+  font-weight: 600;
+}
+.footer .footer-bottom .inner .service-list {
+  position: relative;
+  display: block;
+  float: right;
+}
+.footer .footer-bottom .inner .service-list li {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer .footer-bottom .inner .service-list li a {
+  font-size: 12px;
+  color: #777;
 }/*# sourceMappingURL=main.css.map */
