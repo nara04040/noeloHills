@@ -315,6 +315,42 @@ $innerwidth : 1320px;
     }
 }
 
+/* 상단 반응형*/
+@media all and (max-width:1080px) {
+    .header .inner .gnb .menu>li>a {
+        padding: 0 18px;
+    }
+
+    .header .inner .member {
+        margin-left: 22px;
+    }
+}
+
+@media all and (max-width:895px) {
+    .header .inner .gnb .menu>li>a {
+        padding: 0 10px;
+    }
+}
+
+@media all and (max-width:800px) {
+    .header .inner .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .header .inner .gnb {
+        display: none;
+    }
+
+    .header .inner .member {
+        display: none;
+    }
+}
+
 /* 비주얼 */
 .visual {
     position: relative;
@@ -412,6 +448,52 @@ $innerwidth : 1320px;
     }
 }
 
+/*비주얼 반응형*/
+@media all and (max-width:760px) {
+    .visual {
+        height: 69vw;
+    }
+
+    .visual .sw-visual .sw-visual-control {
+        top: 41.6vw;
+    }
+
+    .visual .sw-visual .visual-txt {
+        top: 46vw;
+    }
+
+    .visual .sw-visual .visual-txt .visual-title {
+        font-size: 20px;
+        margin-bottom: 2.65vw;
+    }
+
+    .visual .sw-visual .visual-txt .visual-desc {
+        font-size: 12px;
+        margin-bottom: 1.5vw;
+    }
+
+    .visual .sw-visual .visual-txt .visual-bt {
+        font-size: 12px;
+        padding: 1vw 1.5vw;
+    }
+}
+
+@media all and (max-width:640px) {
+    .visual {
+        height: 550px;
+        margin-bottom: 0;
+    }
+
+    .visual .sw-visual .sw-visual-control {
+        top: 330px;
+    }
+
+    .visual .sw-visual .visual-txt {
+        top: 390px;
+    }
+}
+
+
 /* 카테고리 */
 .category {
     position: relative;
@@ -502,9 +584,11 @@ $innerwidth : 1320px;
         display: block;
         float: left;
         margin-right: 45px;
-        &:hover >a {
+
+        &:hover>a {
             color: #ffcc00;
         }
+
         >a {
             position: relative;
             display: inline-block;
@@ -592,6 +676,7 @@ $innerwidth : 1320px;
                 }
             }
         }
+
         .insta-link {
             position: absolute;
             right: 0;
@@ -633,6 +718,7 @@ $innerwidth : 1320px;
                     position: relative;
                     display: inline-block;
                     margin-left: 20px;
+
                     a {
                         font-size: 12px;
                         color: #777;

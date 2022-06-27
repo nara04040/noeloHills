@@ -262,6 +262,39 @@ body {
   background: url("../images/ico-login.png") no-repeat center;
 }
 
+/* 상단 반응형*/
+@media all and (max-width: 1080px) {
+  .header .inner .gnb .menu > li > a {
+    padding: 0 18px;
+  }
+
+  .header .inner .member {
+    margin-left: 22px;
+  }
+}
+@media all and (max-width: 895px) {
+  .menu > li > a {
+    padding: 0 10px !important;
+  }
+}
+@media all and (max-width: 800px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .gnb {
+    display: none !important;
+  }
+
+  .member {
+    display: none !important;
+  }
+}
 /* 비주얼 */
 .visual {
   position: relative;
@@ -345,6 +378,49 @@ body {
   padding: 10px 20px;
 }
 
+/*비주얼 반응형*/
+@media all and (max-width: 760px) {
+  .visual {
+    height: 69vw;
+  }
+
+  .sw-visual-control {
+    top: 41.6vw !important;
+  }
+
+  .visual-txt {
+    top: 46vw !important;
+  }
+
+  .visual-title {
+    font-size: 20px !important;
+    margin-bottom: 2.65vw !important;
+  }
+
+  .visual-desc {
+    font-size: 12px !important;
+    margin-bottom: 1.5vw !important;
+  }
+
+  .visual-bt {
+    font-size: 12px !important;
+    padding: 1vw 1.5vw !important;
+  }
+}
+@media all and (max-width: 640px) {
+  .visual {
+    height: 550px;
+    margin-bottom: 0;
+  }
+
+  .sw-visual-control {
+    top: 330px !important;
+  }
+
+  .visual-txt {
+    top: 390px !important;
+  }
+}
 /* 카테고리 */
 .category {
   position: relative;
