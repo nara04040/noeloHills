@@ -25,6 +25,7 @@ a {
 
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
     line-height: 1.5;
     letter-spacing: -0.45px;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 /* 공통클래스 */
@@ -315,39 +317,39 @@ $innerwidth : 1320px;
     }
 }
 
-/* 상단 반응형*/
-@media all and (max-width:1080px) {
-    .header .inner .gnb .menu>li>a {
-        padding: 0 18px;
+/* 상단 반응형 */
+@media all and (max-width: 1080px) {
+    .menu>li>a {
+        padding: 0 18px !important;
     }
 
-    .header .inner .member {
-        margin-left: 22px;
-    }
-}
-
-@media all and (max-width:895px) {
-    .header .inner .gnb .menu>li>a {
-        padding: 0 10px;
+    .member-list>li {
+        margin-left: 22px !important;
     }
 }
 
-@media all and (max-width:800px) {
-    .header .inner .logo {
+@media all and (max-width: 880px) {
+    .menu>li>a {
+        padding: 0 10px !important;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .logo {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        margin-top: 0;
-        margin-right: 0;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
     }
 
-    .header .inner .gnb {
-        display: none;
+    .gnb {
+        display: none !important;
     }
 
-    .header .inner .member {
-        display: none;
+    .member {
+        display: none !important;
     }
 }
 
@@ -355,7 +357,6 @@ $innerwidth : 1320px;
 .visual {
     position: relative;
     display: block;
-    height: 910px;
 
     .sw-visual {
         width: 100%;
@@ -368,23 +369,30 @@ $innerwidth : 1320px;
             height: 100%;
         }
 
+        .visual-img {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 600px;
+        }
+
         .visual-1 {
-            background: url('../images/visual_1.png') no-repeat center;
+            background: url('../images/PC_minimal_new.png') no-repeat center;
             background-size: cover;
         }
 
         .visual-2 {
-            background: url('../images/visual_2.png') no-repeat center;
+            background: url('../images/PC1_newborn.png') no-repeat center;
             background-size: cover;
         }
 
         .visual-3 {
-            background: url('../images/visual_3.png') no-repeat center;
+            background: url('../images/PC2_BabyEssence.png') no-repeat center;
             background-size: cover;
         }
 
         .visual-4 {
-            background: url('../images/visual_4.png') no-repeat center;
+            background: url('../images/PC3_Branding.png') no-repeat center;
             background-size: cover;
         }
 
@@ -410,89 +418,108 @@ $innerwidth : 1320px;
         }
 
         .visual-txt {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 645px;
+            position: relative;
             display: block;
             text-align: center;
-
-
-            .visual-title {
-                position: relative;
-                display: block;
-                font-size: 30px;
-                font-weight: 500;
-                color: #777;
-                margin-bottom: 35px;
-            }
-
-            .visual-desc {
-                position: relative;
-                display: block;
-                font-size: 20px;
-                color: #777;
-                margin-bottom: 20px;
-            }
-
-            .visual-bt {
-                position: relative;
-                display: block;
-                font-size: 20px;
-                color: #fff;
-                background-color: #ffcc00;
-                margin-bottom: 35px;
-                padding: 10px 20px;
-            }
+            padding: 50px 0;
         }
+
+        .visual-title {
+            position: relative;
+            display: block;
+            font-size: 30px;
+            color: #777;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+
+        .visual-desc {
+            position: relative;
+            display: block;
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .visual-bt {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            color: #fff;
+            background-color: #ffcc00;
+            padding: 10px 20px;
+        }
+
     }
 }
 
-/*비주얼 반응형*/
-@media all and (max-width:760px) {
-    .visual {
-        height: 69vw;
+/* 비주얼 반응형 */
+@media all and (max-width: 1320px) {
+    .visual-img {
+        height: 45vw !important;
     }
 
-    .visual .sw-visual .sw-visual-control {
-        top: 41.6vw;
+    .sw-visual-control {
+        top: 41.66vw !important;
     }
 
-    .visual .sw-visual .visual-txt {
-        top: 46vw;
-    }
-
-    .visual .sw-visual .visual-txt .visual-title {
-        font-size: 20px;
-        margin-bottom: 2.65vw;
-    }
-
-    .visual .sw-visual .visual-txt .visual-desc {
-        font-size: 12px;
-        margin-bottom: 1.5vw;
-    }
-
-    .visual .sw-visual .visual-txt .visual-bt {
-        font-size: 12px;
-        padding: 1vw 1.5vw;
+    .visual-txt {
+        padding: 3.78vw !important;
     }
 }
 
-@media all and (max-width:640px) {
-    .visual {
-        height: 550px;
-        margin-bottom: 0;
+@media all and (max-width:800px) {
+    .visual-img {
+        height: 125vw !important;
     }
 
-    .visual .sw-visual .sw-visual-control {
-        top: 330px;
+    .visual-1 {
+        background: url('../images/M_minimal_new.png') no-repeat center !important;
     }
 
-    .visual .sw-visual .visual-txt {
-        top: 390px;
+    .visual-2 {
+        background: url('../images/M1_newborn.png') no-repeat center !important;
+    }
+
+    .visual-3 {
+        background: url('../images/M2_BabyEssence.png') no-repeat center !important;
+    }
+
+    .visual-4 {
+        background: url('../images/M3_Branding.png') no-repeat center !important;
+    }
+
+    .sw-visual-control {
+        top: 118.5vw !important;
     }
 }
 
+@media all and (max-width:480px) {
+    .visual-img {
+        height: 124.375vw !important;
+    }
+
+    .visual-1 {
+        background: url('../images/v_480_1.png') no-repeat center !important;
+    }
+
+    .visual-2 {
+        background: url('../images/v_480_2.png') no-repeat center !important;
+    }
+
+    .visual-3 {
+        background: url('../images/v_480_3.png') no-repeat center !important;
+    }
+
+    .visual-4 {
+        background: url('../images/v_480_4.png') no-repeat center !important;
+    }
+
+    .sw-visual-control {
+        top: 115vw !important
+    }
+
+}
 
 /* 카테고리 */
 .category {
@@ -501,7 +528,6 @@ $innerwidth : 1320px;
 
     .inner {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
 
         >div {
@@ -511,9 +537,9 @@ $innerwidth : 1320px;
             height: 620px;
 
             padding: 80px;
+
             align-content: center;
             flex-wrap: wrap;
-
 
             .category-desc {
                 position: relative;
@@ -527,11 +553,11 @@ $innerwidth : 1320px;
             .category-link {
                 position: relative;
                 display: block;
-                padding: 20px 33px;
+                padding: 10px 20px;
                 border: 2px solid #777;
                 font-size: 20px;
+                font-weight: 600;
             }
-
 
             &:nth-child(1) {
                 background: url('../images/main_img01_2.png') no-repeat center;
@@ -552,20 +578,54 @@ $innerwidth : 1320px;
                 background: url('../images/main_img04.png') no-repeat center;
                 background-size: cover;
             }
-
-
         }
     }
-
 }
 
-.category .inner {}
+.wb1,
+.wb2,
+.wb3,
+.wb4 {
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50%;
+    display: none;
+}
+
+// 카테고리 반응형
+@media all and (max-width:1320px) {
+    .category .inner>div {
+        height: 46.96vw !important;
+    }
+}
+
+@media all and (max-width:760px) {
+    .category .inner>div {
+        width: 100% !important;
+        height: 100vw !important;
+    }
+
+    .category-txt {
+        display: none !important;
+    }
+
+    .wb1,
+    .wb2,
+    .wb3,
+    .wb4 {
+        display: inline-block;
+    }
+}
 
 /* 사이트맵 */
 .sitemap {
     position: relative;
     display: block;
-    border-top: 1px solid #bcbcbc;
+    padding: 35px 0;
+    border-top: 1px solid #dcdcdc;
 }
 
 .sitemap .inner {
@@ -575,156 +635,190 @@ $innerwidth : 1320px;
 
 .sitemap-menu {
     position: relative;
-    display: block;
-    padding: 35px 0;
+    display: table;
     width: 770px;
+}
 
-    >li {
-        position: relative;
-        display: block;
-        float: left;
-        margin-right: 45px;
+.sitemap-menu>li {
+    position: relative;
+    display: table-cell;
+    // float: left;
+    // margin-right: 45px;
+}
 
-        &:hover>a {
-            color: #ffcc00;
-        }
+.sitemap-menu>li>a {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-        >a {
-            position: relative;
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 500;
-
-            &:hover {
-                color: #ffcc00;
-            }
-        }
-    }
-
+.sitemap-menu>li>a:hover {
+    color: #ffcc00;
 }
 
 .sitemap-submenu {
     position: relative;
     display: block;
     margin-top: 15px;
-
-    >li {
-        position: relative;
-        display: block;
-        margin-bottom: 15px;
-
-        >a {
-            position: relative;
-            display: inline-block;
-            font-size: 12px;
-
-            &:hover {
-                color: #ffcc00;
-            }
-        }
-    }
-
 }
 
+.sitemap-submenu li {
+    position: relative;
+    display: block;
 
+    margin-bottom: 15px;
+}
+
+.sitemap-submenu li a {
+    position: relative;
+    display: inline-block;
+
+    font-size: 12px;
+}
+
+.sitemap-submenu li a:hover {
+    color: #ffcc00;
+}
+
+.sitemap-menu>li:hover>a {
+    color: #ffcc00;
+}
+
+/* 반응형 */
+@media all and (max-width:800px) {
+    .sitemap-submenu li a {
+        font-size: 10px;
+    }
+}
 
 /* 하단 */
 .footer {
     position: relative;
     display: block;
+}
 
-    .inner {
-        width: 770px;
+.footer .inner {
+    width: 777px;
+}
+
+.footer-top {
+    position: relative;
+    display: block;
+    border-top: 1px solid #dcdcdc;
+    background-color: #f3f3f3;
+    padding: 35px 0;
+}
+
+.siteinfo-list {
+    position: relative;
+    display: block;
+}
+
+.siteinfo-list li {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+}
+
+.siteinfo-list li:last-child {
+    margin-bottom: 0;
+}
+
+.siteinfo-list li span {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 12px;
+    color: #777;
+}
+
+.siteinfo-list li span em {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #7e868c;
+}
+
+
+
+.insta-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 155px;
+    height: 30px;
+    background: url('../images/ico_insta.png') no-repeat center;
+}
+
+.footer-bottom {
+    position: relative;
+    display: block;
+    border-top: 1px solid #dcdcdc;
+    background-color: #e5e5e5;
+    padding: 25px 0;
+}
+
+.copy {
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 12px;
+    color: #777;
+}
+
+.copy strong {
+    font-weight: 600;
+}
+
+.service-list {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.service-list li {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.service-list li a {
+    position: relative;
+    display: block;
+    font-size: 12px;
+}
+
+@media all and (max-width:800px) {
+    .footer .inner {
+        width: 100%;
     }
 
-    .footer-top {
-        position: relative;
-        display: block;
-        border-top: 1px solid #dcdcdc;
-        background-color: #f3f3f3;
-        padding: 35px 0;
-
-        .siteinfo-list {
-            position: relative;
-            display: block;
-            white-space: nowrap;
-
-            li {
-                position: relative;
-                display: block;
-
-                span {
-                    position: relative;
-                    display: inline-block;
-                    margin-right: 40px;
-                    font-size: 12px;
-                    color: #7e868c;
-
-                    em {
-                        position: relative;
-                        display: inline-block;
-                        margin-left: 20px;
-                        font-size: 12px;
-                        color: #777;
-                    }
-
-                    a {
-                        position: relative;
-                        display: inline-block;
-                        margin-left: 20px;
-                    }
-                }
-            }
-        }
-
-        .insta-link {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            display: block;
-            width: 155px;
-            height: 30px;
-            background: url('../images/ico_insta.png') no-repeat center;
-
-        }
+    .footer-top .inner {
+        padding-bottom: 35px;
     }
 
-    .footer-bottom {
-        position: relative;
+    .siteinfo-list li span {
         display: block;
-        border-top: 1px solid #dcdcdc;
-        background-color: #e5e5e5;
-        padding: 25px 0;
+        margin-bottom: 15px;
+    }
 
-        .inner {
-            .copy {
-                position: relative;
-                display: block;
-                float: left;
-                font-size: 12px;
-                color: #777;
+    .siteinfo-list li span em {
+        width: 120px;
+    }
 
-                strong {
-                    font-weight: 600;
-                }
-            }
+    .copy {
+        width: 100%;
+        text-align: center;
+    }
 
-            .service-list {
-                position: relative;
-                display: block;
-                float: right;
-
-                li {
-                    position: relative;
-                    display: inline-block;
-                    margin-left: 20px;
-
-                    a {
-                        font-size: 12px;
-                        color: #777;
-                    }
-                }
-            }
-        }
+    .siteinfo-list {
+        width: 100%;
+    }
+    .service-list {
+        width: 100%;
+        text-align: center;
     }
 }
